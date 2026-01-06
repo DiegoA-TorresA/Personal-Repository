@@ -1,0 +1,157 @@
+/* ===============================
+   RESET GENERAL
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ===============================
+   FONDO GENERAL
+================================ */
+body.bg {
+  min-height: 100vh;
+  background: #e78cff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===============================
+   CONTENEDOR PRINCIPAL
+================================ */
+.container {
+  position: relative;
+  width: 95%;
+  max-width: 900px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* ===============================
+   TÍTULOS
+================================ */
+h1, h2 {
+  color: #000;
+  margin-bottom: 15px;
+}
+
+/* ===============================
+   BOTONES
+================================ */
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 32px;
+  background: #7c6cff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* ===============================
+   CORAZONES DECORATIVOS
+================================ */
+.heart {
+  position: absolute;
+  font-size: 220px;
+  color: red;
+}
+
+.top-left { top: 100px; left: 10px; }
+.top-right { top: 100px; right: 10px; }
+.bottom-left { bottom: 100px; left: 10px; }
+.bottom-right { bottom: 100px; right: 10px; }
+
+/* ===============================
+   TARJETA MENSAJE
+================================ */
+.card {
+  background: #ff3fbf;
+  padding: 25px 20px;
+  border-radius: 25px;
+  max-width: 650px;
+  margin: 20px auto;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ===============================
+   COLLAGE CORAZÓN
+================================ */
+.heart-collage {
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  max-width: 360px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Imágenes */
+.heart-collage img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Espacios vacíos */
+.empty {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+/* ===============================
+   CORRECCIÓN FINAL DEL CORAZÓN
+   (centra perfectamente la punta)
+================================ */
+.heart-collage > :nth-last-child(4),
+.heart-collage > :nth-last-child(3),
+.heart-collage > :nth-last-child(2),
+.heart-collage > :nth-last-child(1) {
+  grid-column: span 7;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 600px) {
+
+  .heart {
+    font-size: 40px;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .heart-collage {
+    max-width: 280px;
+    gap: 6px;
+  }
+
+  .btn {
+    padding: 10px 26px;
+    font-size: 15px;
+  }
+}
